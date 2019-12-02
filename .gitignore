@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+**/*.o
+**/bin/*
+**/~*.docx
+**/~*.pptx
+**/~*.tmp
+**/~*.xlsx
+**/a.out
+**/obj/*
+**/.vs/*
+**/src/out/
+**/*.class
+Weeks2_Fundamentals_Software/Environments/COBRA/src/HelloApp
+Weeks2_Fundamentals_Software/Environments/COBRA/src/orb.db
