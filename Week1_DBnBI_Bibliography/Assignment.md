@@ -23,8 +23,3 @@ Upload your document and click the Submit to Dropbox button.
 
 |Criteria|Achievement Level 1|Achievement Level 2| Achievement Level 3 (partial points)|Achievement Level 4|Total Points|
 |-----|-----|-----|-----|-----|
-|Criterion 1, 3 points: Writing Quality| Only very minor problems with text/grammar (3) | Some issues with text/grammar but nothing significant (2) | Moderate issues with text/grammar (1) | Significant problems with text/grammar (0)|
-|Criterion 2, 1 point: References| Proper amount of references used and no issues with formatting (1)|Minor issues at missing references or minor problems with formatting (.75)|Attempt at adding references, but improperly used when attempt was made (.5)|No References used (0)|
-|Criterion 3, 2 points: Properly Addressed Issues|All items properly addressed and no significant unanswered questions about direction or process used (2)| Minor issues with work’s content including recommendations or reasoning (1.5)|Moderate issues with work’s content including recommendations or reasoning (1)| Significant issues with work’s content including recommendations or reasoning (0)|
-|Criterion 4, 2 points: Appropriately Selected Literature Reviews|All related works systematically selected, all relevant (2)|Most related works systematically selected, most relevant (1.5)|Some related works systematically selected, some relevant (1)|Totally irrelevant selected research topics (0)|
-|Total Points|||||
