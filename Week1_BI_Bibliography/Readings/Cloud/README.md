@@ -117,4 +117,18 @@ Alternatively the updates can be modeled as:
 - Concurrency control mechanism performs isolation and atomic commitment protocol
   - Pessimistic Control: Lock-based
   - Optimistic: Best effort with abortion
-- Commitment Protocols: 2-phase commit
+- Commitment Protocols: 2-phase commit, voting, paxos, etc.
+- Transactional Granularity is classified as single or multi-shard commit
+- Multiple types of transaction isolation exist (serializable, update only, read-dirty, etc.)
+
+Distributed Transaction Protocol manages the concurrency control via write-ahead logging.
+
+1. The log is divided into log positions
+2. Different partitions will write to different segments and then use a replication protocol, such as Paxos
+3. Transaction Protocol provides sequential writes to each chunk that is later replicated
+
+Contemporary Solutions instead use:
+
+1. Dependency-tracking techniques is paired with linear transactions protocol. Transactions are locally committed on the server, and reordered after the fact instead of aborted or blocked.
+2. Transaction decomposition creates chains of semantical updates and based on application requirements, eventually commits them via Homeostatis protocol allowing for more flexibility ordering.
+3. Follow logical properties to minimize coordination across transactions; e.g. reordering that are equivalent, monotonic
