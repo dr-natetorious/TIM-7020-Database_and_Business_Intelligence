@@ -20,4 +20,10 @@ There are different pipelines for _generation versus acquistion_ feeds.
 - Generation > Acquisition > Storage Analysis
 - Collection > Storage > Analysis > Deployment
 
-When the data is collected from the various sources, it will come in all shapes and sizes.  The system will need to decide if its better to apply _schema on read or write_.
+When the data is collected from the various sources, it will come in all shapes and sizes.  The system will need to decide if its better to apply _schema on read or write_.  These decisions will influence the SQL vs NoSQL patterns that follow.
+
+Then the data needs to be stored in a manner the customer would expected.  Consider the privacy and regulatory requirements that enforce their implicit trust in the system.
+
+During the analysis phase machine learning and other statistical algorithms can be applied to build models.  These models should try to answer directed questions and not boil the ocean.
+
+Then the model needs to be published either behind a service endpoint or as a curated model in a data catalog. If the system is an Open Platform, then additional considerations around third-party data integrations needs to occur.
