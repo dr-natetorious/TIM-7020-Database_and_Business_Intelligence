@@ -14,16 +14,11 @@ Metadata is a critical system property that needs to be efficiently managed and 
 
 Traditional data lifecycle management focuses on the way data is managed, not how they are processed.  Cloud systems decouple the responsibility of (1) Big Data Processing from (2) resource management.
 
-## What are the key research questions
-
-1. What are the most suitable (big) data storage technologies and how do they compete
-with each other according to certain criteria related to non-functional aspects?
-2. What are the most suitable and sophisticated (big) data placement methods that can
-be followed to (optimally) place and/or migrate Big Data?
-
 ## Data Storage Systems
 
 ![dbms.png](dbms.png)
 ![dfs.png](dfs.png)
 
-left off on page 21 of 37
+## Final thoughts
+
+TODO: The article ends with a summary of product and academic gaps associated with lifecycle and storage management. Additional time should be spent reviewing this section and coming up with a summary of the last 3 pages.
