@@ -53,7 +53,8 @@ High quality data should be measured against its "fitness for use" (ISO 25012 St
 
 ### How can data and process driven designs improve data quality
 
-> Based on the above, future research directions in Big Data quality should be geared towards the development of solutions that consider the following:
+Based on the above, future research directions in Big Data quality should be geared towards the development of solutions that consider the following:
+
 a) Assessment of quality as earlier as possible and it end-to-end integration across its.
 b) Implementation of continuous quality improvement and enforcement mechanisms in Big Data quality management.
 c) Specification of Big Data Quality metrics that should cope with the data dynamic nature and its unconventional characteristics.
