@@ -8,7 +8,7 @@
 
 ## A Survey on Graph Database Management Techniques for Huge Unstructured Data (2018)
 
-The authors [Patil N. S., Kiran P2, Kavya N. P., Naresh Patel K. M.](GraphDb_Management_for_Huge_Unstruct_Data.pdf) conducted a survey across the landscape of Graph database (GDB) systems and their capabilities.  A GDB is highly efficient at querying relationship information, such as social graphs, because it traverse local instead of global indexes.  Data models for GDB tend to much eaiser to create and describe, because they more naturally align with "whiteboard diagrams."
+The authors [Patil N. S., Kiran P, Kavya N. P., Naresh Patel K. M.](GraphDb_Management_for_Huge_Unstruct_Data.pdf) conducted a survey across the landscape of Graph database (GDB) systems and their capabilities.  A GDB is highly efficient at querying relationship information, such as social graphs, because it traverse local instead of global indexes.  Data models for GDB tend to much eaiser to create and describe, because they more naturally align with "whiteboard diagrams."
 
 Many solutions have attempted to provide graph abstractions on top of relational databases, or other traditional technologies.  These tend to be inefficient because:
 
