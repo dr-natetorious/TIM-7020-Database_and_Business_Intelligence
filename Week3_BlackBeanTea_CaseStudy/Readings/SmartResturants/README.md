@@ -12,4 +12,15 @@ The corporate author [ENP Newswire](OpenTable_Unveils_BI_Suite.pdf) provides a f
 
 ## Foody - Smart Restaurant Management and Ordering System (2018)
 
-TODO: Add summary.
+In _2018 IEEE Region 10 Humanitarian Technology Conference (R10-HTC) Humanitarian Technology Conference (R10-HTC), 2018 IEEE Region 10. :1-6 Dec, 2018_; [Liyanage, V; Ekanayake, A; Premasiri, H; Munasinghe, P; and Thelijjagoda, S](Foody_Smart_Restaurant_Management.pdf) attempt to maximize customer enjoyment through a collection of Key Performance Indicators (KPI) such as:
+
+- Delivering the correct product
+- Reducing delays to service clients
+- Recommending personalized items
+- Bridging the ordering workflow into mobile
+
+### What additional features do they offer
+
+This effort also builds on [NFC Smart Restaurant](../IoT/NearField_Sensor_Cloud_Smart_Restaurant.pdf) and is by the same authors.  Additional features include NLP of customer feedback, and IoT sensors to detect when events occur such as food is cooked.
+
+A smart scheduling algorithm is also provided to determine items should be started, such as chicken pizza takese 15 minutes and a pasta takes 7. So, (1) start the pizza, (2) wait 8 minutes, and (3) do the pasta.  More interesting aspect is what takes place during those 8 minutes, and how other orders need to weave for maximum parallel processing.

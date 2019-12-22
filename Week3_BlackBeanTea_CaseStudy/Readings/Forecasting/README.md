@@ -35,29 +35,10 @@ v = total visitors
 
 ### Which features should be selected
 
-1. The first group of features are related to time. Using time information, we constructed the following features: year, month,
-week of year, day of week, and whether the data is a holiday.
+1. The first group of features are related to time. Using time information, we constructed the following features: year, month, week of year, day of week, and whether the data is a holiday.
 
 2. The second group of features are from restaurant attributes. To compare different restaurants, we constructed several features: their unique ID, latitude, longitude, genre, and location area. Since some features are categorical, we use [one-hot encoding](https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/) for preprocessing, so that distance-based algorithms can process them. Hence, the training data has a significantly large number of columns.
 
-3. The third group of features are from restaurant visitor history. We constructed several features: mean, median, minimum,
-maximum of visitors, and the total number of visitors before a day (note that we count the repeated visits of a visitor).
+3. The third group of features are from restaurant visitor history. We constructed several features: mean, median, minimum, maximum of visitors, and the total number of visitors before a day (note that we count the repeated visits of a visitor).
 
-4. The last group of features are from reservation history. We constructed several features: mean reserved seats, the total
-number of reserved seats before a day, mean time of the reservation before expected visit, and whether the reservation is
-within 48 hours.
-
-## MyRestaurant: Smart Restaurant with Recommendation System (2018)
-
-In _International Journal of Computing and Digital Systems Vol. 8, No. 2 (March)_; [Koubai, N and Bouyakoub, F](MyRestaurant_with_Recommendation.pdf) describe a system that:
-
-1. Uses IoT to simplify and facilitate employee workflows
-2. Performs recommendations of similar dishes for repeat customers
-
-They define a context, the environment and actors, as the area that IoT systems operate and collaborate to describe.
-
-TODO: Add additional summary
-
-## Near-Field Communication Sensors and Cloud-Based (2016)
-
-TODO: Add summary
+4. The last group of features are from reservation history. We constructed several features: mean reserved seats, the total number of reserved seats before a day, mean time of the reservation before expected visit, and whether the reservation is within 48 hours.
