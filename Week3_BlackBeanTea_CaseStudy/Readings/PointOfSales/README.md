@@ -30,4 +30,7 @@ According to [Maguire, A (2015)](https://quickbooks.intuit.com/r/forecasting/top
 The authors reviewed breakfast cereal sales data, that incorporated different POS data sharing models, and found that the top-down was easiest to implement but less effective in advertising and promotional scenarios.  This is attributed to the unavailability of the right product at the right location at the right time.  
 
 They also found that larger retailers were willing to share POS data with their suppliers.  Smaller organizations agreed (in prinicpal) that it would beneficial but they lacked the processes to provide these data feeds.  Suppliers therefore have to use a combination of topdown and bottomup, filling the voids with less accurate order-flow approximations.
- 
+
+## Finding the True Voice of the Customer in CPG Supply Chains (2014)
+
+In _Journal of Business Logistics, 2014, 35(3): 268–274_; [Zondag and Ferrin](Finding_Customer_Voice_in_SCM.pdf) describe some of the challenges with using POS data for demand forcasting.  They describe the influence of shelve space on purchasing decisions, afterall how does the shopper purchase something that is not easily discovered?  These factors can become hidden in the data feeds and mask the `Voice of the Customer/Supply Chain` (VoC/VoSC).
