@@ -17,6 +17,7 @@ Write a business proposal for Mark Smith at BlackBean that outlines the followin
 3. What kinds of tools would you recommend?
 4. Research and evaluate potential solutions for BlackBean.
 5. Choose the optimal solution for BlackBean. Justify your choices.
+
 You may make assumptions about the resources and other features of BlackBean as necessary to fill in the gaps for your proposal.
 
 Aside from using APA format for references and coversheet, do not structure your assignment as an academic report. Structure your assignment as a business proposal. Support your proposal with at least ten scholarly or industry references.
