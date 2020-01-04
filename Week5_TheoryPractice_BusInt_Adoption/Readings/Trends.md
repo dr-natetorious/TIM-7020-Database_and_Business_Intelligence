@@ -1,6 +1,6 @@
 # Business Intelligence Technology, Applications, and Trends (2015)
 
-In _International Management Review. 2015, Vol. 11 Issue 2, p47-56._; [Obeidat, M; North, M; Richardson, R; Rattanak, V; North, S](BI_Technology_Applications,and_Trends.pdf) briefly and broadly explores the business intelligence technology, applications and trends while provides a few stimulating and innovate theories and practices. The authors also explore several contemporary studies related to the future of BI and surrounding fields.
+In _International Management Review. 2015, Vol. 11 Issue 2, p47-56._; [Obeidat, M; North, M; Richardson, R; Rattanak, V; North, S](BI_Technology_Applications_and_Trends.pdf) briefly and broadly explores the business intelligence technology, applications and trends while provides a few stimulating and innovate theories and practices. The authors also explore several contemporary studies related to the future of BI and surrounding fields.
 
 ## What is competitive intelligence
 
