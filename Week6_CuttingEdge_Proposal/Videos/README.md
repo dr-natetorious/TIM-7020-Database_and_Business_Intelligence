@@ -1,11 +1,5 @@
 # Quantum Databases
 
-## Grover's Algorithm Explained (2019)
-
-In [Grover's Algorithm Explained](https://www.youtube.com/watch?v=3WWrQXcktqc), Naihin explains that Grover's algorithm is a quantum based transform that _iteratively boosts the probability of finding a value that's within a series of buckets_.  The algorithm constructs a loop through a number of `hadamard gates` at the end of each cycle, the amplitude (probability) is increased across the buckets leading to a shift in the likelihood of being correct choice. This can be applied to various scenarios, such as NoSQL databases where a non-indexed value resides in an arbitrary node.
-
-An analogy would be a ball exists in 1 of 10 equal boxes.  To determine which one has the ball, first they are shaken up and down and that causes some noise from boxes (1, 3, 6); so the probabiliy curve adjusts to account for this.  Next the boxes as shaken left to right, this causes noise from (3, 6, 7, 8); and the probabiliy curve adjusts to convey there's more evidence its in 3 or 6.  The boxes are continually shaken from different direction, resulting in high confidence that the correct choice is box 3.  That box is opened and found the ball (...or a dead cat).
-
 ## You don't know how Quantum Computers work (2015)
 
 In [this video](https://www.youtube.com/watch?v=ZoT82NDpcvQ), Frane if Essence explains that `Qubits` are in a spherical _super position_ that contains an `Alpha and Beta` component that represent the probabilities of being `1 or 0`.  For illustrative purposes these can be sliced into a layer to become a circular super position and the `complex number` can be treated as a `bit`.  When two of these "simplified qubits" cross through a `blackbox transformer` they exit in one of four positions.
@@ -71,3 +65,13 @@ We are presently entering the second era, which causes aspects of the system to 
 ### How does a hybrid CPU/QPU strategy improve matters
 
 Consider a scenario like machine learning, where the CPU attempts to measure an inferance based on some cost (aka objective) function.  That cost function is approximated by sending thousands of examples through a neural network to train the model weights.  Today that training uses GPU cards because of their specialization in matrix multiplication (called tensors).  However, in the future QPU could accelerate tensor flows (get the name?) to tune the model more accurately in less time.
+
+## Grover's Algorithm Explained (2019)
+
+In [Grover's Algorithm Explained](https://www.youtube.com/watch?v=3WWrQXcktqc), Naihin explains that Grover's algorithm is a quantum based transform that _iteratively boosts the probability of finding a value that's within a series of buckets_.  The algorithm constructs a loop through a number of `hadamard gates` at the end of each cycle, the amplitude (probability) is increased across the buckets leading to a shift in the likelihood of being correct choice. This can be applied to various scenarios, such as NoSQL databases where a non-indexed value resides in an arbitrary node.
+
+An analogy would be a ball exists in 1 of 10 equal boxes.  To determine which one has the ball, first they are shaken up and down and that causes some noise from boxes (1, 3, 6); so the probabiliy curve adjusts to account for this.  Next the boxes as shaken left to right, this causes noise from (3, 6, 7, 8); and the probabiliy curve adjusts to convey there's more evidence its in 3 or 6.  The boxes are continually shaken from different direction, resulting in high confidence that the correct choice is box 3.  That box is opened and found the ball (...or a dead cat).
+
+## Quantum Computation 6: Grover's Search Algorithm (2016)
+
+In [this video](https://youtu.be/JCM7M7XfSFg), Guardia lectures about the mathmatical rational of Grover's algorithm and how it works.  Around 8min in has the best explaination that I found on the purpose of the rotational matrix and how it actually works.

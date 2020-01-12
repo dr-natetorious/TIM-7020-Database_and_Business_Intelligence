@@ -4,6 +4,8 @@
 
 For _2014 IEEE 10th World Congress on Services_; [Simmonds et al.](Platform_StreamData_DesignPatterns.pdf) propose a system for consuming Twitter firehose into Casandra for near realtime analytics of 5-100k tweets per second.  They defined a query language called `Continuous Query Language (CQL)` to parse and aggregate metadata as it became indexed into the big data cluster.
 
+*Note*: It appears that Twitter firehose has been replaced with [Decahose streams](https://developer.twitter.com/en/docs/tweets/sample-realtime/overview/decahose) and now requires an enterprise license.
+
 ![twitter_analytics.png](twitter_analytics.png)
 
 ## ChronicleDB: A High-Performance Event Store (2019)
