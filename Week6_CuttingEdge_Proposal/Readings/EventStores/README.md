@@ -12,4 +12,16 @@ The major design principal is _the log is the database_, they avoid additional o
 
 ### How is the storage layed out
 
-By default, the log is written and read in a sequential manner.  This requirement constrains the layout of log files to be relatively simple, and avoid random access as is common in generic relational stores.  Within the log is a sequence of blocks, with each block a fixed size and populated with pointer offsets to the individual records.  These pointers use a virtual address strategy that uses relative jump lengths to interview user data -- for performance purposes.
+By default, the log is written and read in a sequential manner.  This requirement constrains the layout of log files to be relatively simple, and avoid random access as is common in generic relational stores.  Within the log is a sequence of blocks, with each block a fixed size and populated with pointer offsets to the individual records.  These pointers use a virtual address strategy that uses relative jump lengths to interview user data -- for performance purposes.  Some of these blocks will be variable sized on disk due to the LZ4 compression algorithm that causes a distorion between logical and physical sizes.
+
+An address translation tree allows for the physical addresses of records within a block to be relative within a hierarchical structure, to support fast recovery of a node failure.  These ATT-blocks are interweived within the macro blocks that also contain compressed user data blocks.  Another advantage of this model is that sliding windows are extremely efficient as the operations requires moving the read head 8MiB to reach exactly the next block.
+
+There is also an index on write schemantic as the ATT and user data can be committed at the same time, versus other systems that rely on distinct files and could not make the same optimization.  Another strength comes from the `TAB+-tree` (Temporal Aggregated B+-tree), which is a B+-tree that is indexed on timestamps instead of object primary key values.  As values are appended to the tree, aggregations statistics (e.g. sum,min,max) are updated in real-time to avoid performance penalties if they are ever needed.
+
+### How are out of order events handled
+
+A series of active blocks are held in memory and flushed to disk as a duration theshold is exceeded.  This allows for out of order events to be handled within a reasonable delay.  If the delay is longer, then a new block will be created and indexed into the TAB+-tree at the appropriate point.
+
+### What else did they say
+
+Left off around page 25, gotta wash the kid.
