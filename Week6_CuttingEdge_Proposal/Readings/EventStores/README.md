@@ -1,5 +1,11 @@
 # Event Stores
 
+## A Platform for Analysing Stream and Historic Data with Efficient and Scalable Design Patterns (2014)
+
+For _2014 IEEE 10th World Congress on Services_; [Simmonds et al.](Platform_StreamData_DesignPatterns.pdf) propose a system for consuming Twitter firehose into Casandra for near realtime analytics of 5-100k tweets per second.  They defined a query language called `Continuous Query Language (CQL)` to parse and aggregate metadata as it became indexed into the big data cluster.
+
+![twitter_analytics.png](twitter_analytics.png)
+
 ## ChronicleDB: A High-Performance Event Store (2019)
 
 In _ACM Transactions on Database Systems, Vol. 44, No. 4, Article 13. Publication date: October 2019._; [Seideman et al.](ChronicalDb_EventStore.pdf) present ChronicleDB, a novel database system with a storage layout tailored for high write performance under fluctuating data rates and powerful indexing capabilities to support a variety of queries. In addition, ChronicleDB offers low-cost fault tolerance and instant recovery within milliseconds.
