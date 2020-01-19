@@ -29,7 +29,7 @@ In each of these systems a `cluster` has some number of `CPU` workers that are a
 
 *Single Stage Application Pattern*.  All operations are performed on a single worker, reducing communication overhead at the expense of additional computation overhead.  Consider the wasted resources that could take place by interweaving more operations or fanning-out parallel sub tasks.
 
-*Operator Seperation*. Operations are split into two stages, so that the action can be left and right side are reduced (or similar associative action) in parallel.
+*Operator Seperation*. Operations are split into two stages, so that the action can be left and right side are reduced (or similar communative action) in parallel.
 
 *Fission Pattern*.  Divides the branches across multiple tasks and then merges the results in a later stage.
 
@@ -45,6 +45,21 @@ In each of these systems a `cluster` has some number of `CPU` workers that are a
 
 In _ACM Computing Surveys, Vol. 46, No. 4, Article 46, Publication date: March 2014._; [Hirzel et al.](StreamProcessingOptimizations.pdf) expand on these patterns with a collection of strategies to improve processing rates.  For instance, the operator reordering states that more selective filters should run before relaxed instances.  Another proposal is to apply dedup steps early on so that the net volume through the processing network decreases.
 
-These volume reduction methods also apply to state that can often be placed in shared memory and a pointer passed between the systems.
+These volume reduction methods also apply to state that can often be placed in shared memory and a pointer passed between the systems.  Many of the ideas of this paper overlap with Basanta-Val et al.
 
 ![optimizations.png](optimizations.png)
+
+## Reliable Speculative Processing of Out-of-Order Event Streams in Generic Publish/Subscribe Middlewares (2013)
+
+In _DEBS’13, June 29–July 3, 2013, Arlington, Texas, USA._; [Mutschler, C; Philippsen, M](ReliableSpeculativeProcessing.pdf) focus on the stream processing patterns for out-of-order eventing (OOO).  They state that OOO is naturally occurring due to the events routing across multiple worker nodes.
+
+### What strategies are typically used
+
+- Buffering middleware.  This is difficult to correctly configure as too short negates the value, and too long introduces delays.  Many systems are also capable of generating the correct answer (e.g., communative operations).
+- Speculative middleware.  The system keeps track of a buffer of events, and replays sequences only-if an OOO event is detected.  This is analogous to CPU pipeline design.
+
+The authors propose a solution that uses a hybrid solution to offload the buffer from the critical path, and external monitor for application specific rules.  When a rule is broken, then they apply a remediation policy to replay the new choices.  How this works, is sequences of related events are ordered in processing queues and if an OOO arrives it is placed into the correct place in line when possible.  Since processors are pulling from the buffer there's a more likely chance that no remediation is needed since the processing queue is still draining.
+
+## An Efficient Framework for String Similarity Continuous Query on Data Stream (2018)
+
+In _The 2018 5th International Conference on Systems and Informatics (ICSAI 2018)_; [Cui, J; Shi, L; Li, J; Liu, Z](StringSimularity_ContinuousQuery_on_DataStream.pdf) provide an strategy for evaluating string similarity in streaming data.  The solution can work on any `set` of symbols and relies on a _preprocessing stage_ plus _candidate inspection stage_ to find reduce the number of index entries that are compared using an `edit distance function`. They rely on a sliding window and a `last_seen` timestamp to manage index eviction policies.
