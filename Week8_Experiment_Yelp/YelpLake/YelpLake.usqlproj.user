@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StartFile>ImportFiles.usql</StartFile>
+    <ActiveFile>ImportFiles.usql</ActiveFile>
+    <BuildClusterPlanProperty>False</BuildClusterPlanProperty>
+  </PropertyGroup>
+  <ItemGroup>
+    <ScriptUserData Include="ImportFiles.usql">
+      <UseLocalComputeAccount>true</UseLocalComputeAccount>
+      <ClusterComputeAccount>DataLakeCA:nateb (N.Bachmeier8343@o365.ncu.edu)</ClusterComputeAccount>
+      <ClusterDatabase>master</ClusterDatabase>
+      <ClusterSchema>dbo</ClusterSchema>
+      <LocalComputeAccount>DataLakeLocalCA:localcomputeaccount</LocalComputeAccount>
+      <LocalDatabase>master</LocalDatabase>
+      <LocalSchema>dbo</LocalSchema>
+      <RecurrenceName>ImportFiles_ADLVSTool</RecurrenceName>
+      <RecurrenceId>1a361397-9d71-4459-a89f-0dc5df9f1f56</RecurrenceId>
+      <Parallelism>10</Parallelism>
+    </ScriptUserData>
+  </ItemGroup>
+</Project>

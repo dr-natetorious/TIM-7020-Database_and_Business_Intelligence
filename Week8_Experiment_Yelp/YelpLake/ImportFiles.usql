@@ -1,0 +1,201 @@
+﻿DECLARE @outCsv bool = true;
+//DECLARE @basePath string = "/yelp/";
+DECLARE @basePath string = "s:/yelp/";
+DECLARE @maxLines int? = null;
+USING NcuPhd;
+USE DATABASE yelp;
+
+@business =
+    EXTRACT business_id string,
+            name string,
+            address string,
+            city string,
+            state string,
+            postal_code string,
+            latitude double,
+            longitude double,
+            stars double,
+            review_count long,
+            is_open long,
+            attributes string,
+            categories string,
+            hours string
+    FROM @basePath + "business.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @business
+   TO @basePath+"business.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS business;
+    CREATE TABLE business
+    (
+        INDEX identifier
+        CLUSTERED(business_id)
+        DISTRIBUTED BY
+        HASH(business_id)
+    )
+    AS
+    SELECT *
+    FROM @business;
+END;
+
+
+@checkin =
+    EXTRACT business_id string,
+            date string
+    FROM @basePath + "checkin.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @checkin
+   TO @basePath+"checkin.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS checkin;
+    CREATE TABLE checkin
+    (
+        INDEX identifier
+        CLUSTERED(business_id)
+        DISTRIBUTED BY
+        HASH(business_id)
+    )
+    AS
+    SELECT *
+    FROM @checkin;
+END;
+
+@photos =
+    EXTRACT business_id string,
+            caption string,
+            photo_id string,
+            label string
+    FROM @basePath + "photo.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @photos
+   TO @basePath+"photos.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS photos;
+    CREATE TABLE photos
+    (
+        INDEX identifier
+        CLUSTERED(business_id)
+        DISTRIBUTED BY
+        HASH(photo_id)
+    )
+    AS
+    SELECT *
+    FROM @photos;
+END;
+
+@review =
+    EXTRACT business_id string,
+            review_id string,
+            user_id string,
+            stars double,
+            useful long,
+            funny long,
+            cool long,
+            text string,
+            date string
+    FROM @basePath + "review.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @review
+   TO @basePath+"review.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS review;
+    CREATE TABLE review
+    (
+        INDEX identifier
+        CLUSTERED(business_id, user_id)
+        DISTRIBUTED BY
+        HASH(review_id)
+    )
+    AS
+    SELECT *
+    FROM @review;
+END;
+
+@tip =
+    EXTRACT business_id string,
+            user_id string,
+            text string,
+            date string,
+            compliment_count long
+    FROM @basePath + "tip.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @tip
+   TO @basePath+"tip.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS tip;
+    CREATE TABLE tip
+    (
+        INDEX identifier
+        CLUSTERED(business_id, user_id)
+        DISTRIBUTED BY
+        HASH(date)
+    )
+    AS
+    SELECT *
+    FROM @tip;
+END;
+
+@user =
+    EXTRACT user_id string,
+            name string,
+            review_count long,
+            yelping_since string,
+            useful long,
+            funny long,
+            cool long,
+            elite string,
+            friends string,
+            fans long,
+            average_stars double,
+            compliment_hot long,
+            compliment_more long,
+            compliment_profile long,
+            compliment_cute long,
+            compliment_list long,
+            compliment_note long,
+            compliment_plain long,
+            compliment_cool long,
+            compliment_funny long,
+            compliment_writer long,
+            compliment_photos long
+    FROM @basePath + "user.json"
+    USING new JsonExtractor();
+
+IF @outCsv 
+THEN
+   OUTPUT @user
+   TO @basePath+"user.csv"
+   USING Outputters.Csv();
+ELSE
+    DROP TABLE IF EXISTS user;
+    CREATE TABLE user
+    (
+        INDEX identifier
+        CLUSTERED(user_id)
+        DISTRIBUTED BY
+        HASH(user_id)
+    )
+    AS
+    SELECT *
+    FROM @user;
+END;
