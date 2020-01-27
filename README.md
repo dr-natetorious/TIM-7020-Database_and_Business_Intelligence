@@ -1,4 +1,4 @@
-# TIM-7020 Database_and_Business_Intelligence
+# TIM-7020 Databases and Business Intelligence
 
 Notes, papers and projects regarding the emerging issues in data management.
 
