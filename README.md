@@ -19,7 +19,7 @@ Data drives the world we live in. From self-driving cars to the top apps in thes
 ## Course Learning Outcomes
 
 1. Evaluate an organization’s data management needs and potential solutions.
-2. Evaluate emerging research in data management and business intelligencefor its utility in solving organizational data management problems.
+2. Evaluate emerging research in data management and business intelligence for its utility in solving organizational data management problems.
 3. Evaluate the gaps between theory and practice in data management and business intelligence.
 4. Propose improvements to theory and practice in data management and business intelligence.
 
