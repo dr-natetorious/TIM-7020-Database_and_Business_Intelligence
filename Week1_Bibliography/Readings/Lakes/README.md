@@ -24,9 +24,7 @@ Governance around data retention and curation need to happen or the lake will be
 
 ### How does Netflix do data lakes
 
-> "The future of the data warehouse probably looks something like what Netflix has constructed," Brey pointed
-out. "Data is housed in a cloud object store; serialized in efficient binary formats like Parquet, ORC, or Avro; and schema and other metadata is stored in a surrogate system like the Hive metastore. This allows the use of
-a plurality of data processing and analytics engines."
+> "The future of the data warehouse probably looks something like what Netflix has constructed," Brey pointed out. "Data is housed in a cloud object store; serialized in efficient binary formats like Parquet, ORC, or Avro; and schema and other metadata is stored in a surrogate system like the Hive metastore. This allows the use of a plurality of data processing and analytics engines."
 
 ## Design of Connected Data Lake System based on Micro Cloud Storage (2018)
 
