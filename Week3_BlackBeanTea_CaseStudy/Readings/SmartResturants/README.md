@@ -12,7 +12,7 @@ The corporate author [ENP Newswire](OpenTable_Unveils_BI_Suite.pdf) provides a f
 
 ## Foody - Smart Restaurant Management and Ordering System (2018)
 
-In _2018 IEEE Region 10 Humanitarian Technology Conference (R10-HTC) Humanitarian Technology Conference (R10-HTC), 2018 IEEE Region 10. :1-6 Dec, 2018_; [Liyanage, V; Ekanayake, A; Premasiri, H; Munasinghe, P; and Thelijjagoda, S](Foody_Smart_Restaurant_Management.pdf) attempt to maximize customer enjoyment through a collection of Key Performance Indicators (KPI) such as:
+In _2018 IEEE Region 10 Humanitarian Technology Conference (R10-HTC), 1-6 Dec, 2018_; [Liyanage, V; Ekanayake, A; Premasiri, H; Munasinghe, P; and Thelijjagoda, S](Foody_Smart_Restaurant_Management.pdf) attempt to maximize customer enjoyment through a collection of Key Performance Indicators (KPI) such as:
 
 - Delivering the correct product
 - Reducing delays to service clients
