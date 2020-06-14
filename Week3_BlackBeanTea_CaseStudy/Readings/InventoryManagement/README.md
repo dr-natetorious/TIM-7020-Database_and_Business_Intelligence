@@ -7,9 +7,7 @@ Viale, J. David. Basics of Inventory Management : From Warehouse to Distribution
 
 ## Module I: Inventory Objectives and Policies
 
-> The objective of inventory management is to replace a very expensive asset
-called “inventory” with a less-expensive asset called “information.” In order to
-accomplish this objective, the information must be timely, accurate, reliable and
+> The objective of inventory management is to replace a very expensive asset called “inventory” with a less-expensive asset called information.” In order to accomplish this objective, the information must be timely, accurate, reliable and
 consistent.
 
 1. Maximizing Customer Service
@@ -19,14 +17,11 @@ consistent.
 
 ### What is the cost function for carrying inventory
 
-> There is a basic premise (principle) of this book that states, “the larger the
-forecast error, the higher the desired customer service level, the more inventory
-that must be carried.”
+> There is a basic premise (principle) of this book that states, “the larger the forecast error, the higher the desired customer service level, the more inventory that must be carried.”
 
 ### What are the types of inventory
 
-> There are five basic types of inventory: raw material, work-in-process, finished
-goods, distribution inventory and maintenance, repair, and operating (MRO) supplies
+> There are five basic types of inventory: raw material, work-in-process, finished goods, distribution inventory and maintenance, repair, and operating (MRO) supplies
 
 1. Cycle stock is the most active parts of inventory
 2. Safety stock is the buffer to protect against fluctuations/forecasting error
